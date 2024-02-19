@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   const dispatch = useDispatch();
-  const plants = useSelector((store) => store.elements);
+  const plants = useSelector((store) => store.plants);
   // const plantsErrors = useSelector((store) => store.plantsErrors);
 
   useEffect(() => {
@@ -37,11 +37,6 @@ function App() {
         <h1>Welcome to Your Garden!</h1>
       </header>
       <Garden />
-      <ul>
-        {plants.map((plants, index) => (
-          <li key={index}>{plants.name}</li>
-        ))}
-      </ul>
     </div>
   );
 }
